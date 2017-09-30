@@ -16,11 +16,10 @@ echo Soft installation
 
 echo Configuration
 # run all configuration change files
-./config/exim.sh
 ./config/postgres.sh
 ./config/fail2ban.sh
-./config/rabbit.sh
 ./config/php.sh
+./config/apache.sh
 
 echo Scripts
 # remove all scripts
@@ -29,7 +28,7 @@ echo Scripts
 ./soft/install_scripts.sh
 
 echo Configure
-# run script to configure some soft and scripts: change configuration file for scripts (set passwords, etc), get dkims and domains.virtual for Exim, create db for Postgres
+# run script to configure some soft and scripts: change configuration file for scripts (set passwords, etc), create db for Postgres
 php7.0 /etc/sender4you/configure.php
 
 echo Cron
@@ -42,4 +41,4 @@ echo Cleanup files
 ./soft/cleanup.sh
 
 # call api to tell that this installation complete
-wget --quiet --output-document=/dev/null http://api.sender4you.com/maxi/finishInstall
+wget --quiet --output-document=/dev/null http://api.sender4you.com/redirect/finishInstall
