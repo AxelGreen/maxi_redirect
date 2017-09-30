@@ -1,1 +1,0 @@
-# maxi_redirect
