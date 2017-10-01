@@ -2,6 +2,7 @@
 
     //use Sender4you\Configure\Postgres;
 
+    use Sender4you\Configure\Apache;
     use Sender4you\Configure\Postgres;
 
     require_once __DIR__.'/vendor/autoload.php';
@@ -12,6 +13,13 @@
         $postgres = new Postgres();
         // create table
         $postgres->run();
+
+        // apache
+        $apache = new Apache();
+        // move files
+        $apache->run();
+        // restart to apply changes
+        $apache->restart();
 
     } catch (Exception $exception) {
 
