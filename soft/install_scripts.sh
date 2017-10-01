@@ -3,7 +3,7 @@
 mkdir /etc/sender4you /var/log/sender4you
 # move scripts to folder
 mv ./scripts/php/.[!.]* /etc/sender4you
-mv ./scripts/php/ /etc/sender4you
+mv ./scripts/php/* /etc/sender4you
 # run composer to install all dependencies
 composer install --working-dir /etc/sender4you
 # copy bash scripts
