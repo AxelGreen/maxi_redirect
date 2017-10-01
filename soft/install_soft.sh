@@ -24,7 +24,7 @@ fi
 
 # start installation
 apt-get update
-apt-get install -y fail2ban htop apache2
+apt-get install -y fail2ban htop apache2 python-certbot-apache
 apt-get install -y postgresql-9.6
 apt-get install -y --allow-unauthenticated php7.0 php7.0-opcache php7.0-mbstring php7.0-bcmath php7.0-zip php7.0-geoip php7.0-curl php7.0-json php7.0-pgsql php7.0-cli apache2-mod-php7.0
 
