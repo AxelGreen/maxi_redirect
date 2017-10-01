@@ -20,7 +20,6 @@ echo Configuration
 ./config/fail2ban.sh
 ./config/php.sh
 ./config/apache.sh
-./config/certbot.sh
 
 echo Scripts
 # remove all scripts
