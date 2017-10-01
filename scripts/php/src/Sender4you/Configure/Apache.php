@@ -21,11 +21,11 @@
         private function moveFiles() {
 
             // move index file
-            $command = '/etc/sender4you/index.php /var/www/';
+            $command = 'mv /etc/sender4you/index.php /var/www/';
             shell_exec($command);
 
             // move .htaccess file
-            $command = '/etc/sender4you/.htaccess /var/www/';
+            $command = 'mv /etc/sender4you/.htaccess /var/www/';
             shell_exec($command);
 
         }
