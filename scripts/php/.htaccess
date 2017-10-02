@@ -1,3 +1,4 @@
+# enable rewrite
 RewriteEngine on
 
 # set custome 404 page contents
