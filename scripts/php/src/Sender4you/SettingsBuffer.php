@@ -61,7 +61,7 @@
          *
          * @return null|self
          */
-        public static function getInstance()
+        public static function getInstance() : self
         {
 
             if (self::$expires < time()) {
