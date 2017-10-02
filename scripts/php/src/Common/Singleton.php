@@ -22,7 +22,7 @@
         /**
          * @return $this
          */
-        public static function getInstance()
+        public static function getInstance() : self
         {
 
             $cls = get_called_class();

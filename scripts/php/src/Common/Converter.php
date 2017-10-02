@@ -12,7 +12,7 @@
          *
          * @return string - string representation of provided number
          */
-        public static function numberToString(int $number)
+        public static function numberToString(int $number) : string
         {
 
             $converted = base_convert($number, 10, 25);
@@ -40,7 +40,7 @@
          *
          * @return int
          */
-        public static function stringToNumber(string $encoded_number)
+        public static function stringToNumber(string $encoded_number) : int
         {
 
             $number = strtr($encoded_number,

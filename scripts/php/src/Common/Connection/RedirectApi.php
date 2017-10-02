@@ -72,7 +72,7 @@
          *
          * @return null|self
          */
-        public static function getInstance()
+        public static function getInstance() : self
         {
 
             // check if instance expired already
@@ -99,7 +99,7 @@
          *
          * @return resource - curl handler
          */
-        public function getConnection()
+        public function getConnection() : resource
         {
 
             return $this->connection;
