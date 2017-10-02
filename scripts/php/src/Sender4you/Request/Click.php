@@ -1,19 +1,27 @@
 <?php
+
     namespace Sender4you\Request;
+
+    use Common\Converter;
 
     class Click extends Request
     {
 
-        protected $endpoint = 'open';
+        protected $endpoint = 'click';
 
         public function handle()
         {
 
             parent::handle();
 
-            echo 'click';
+            $link = $this->api_response;
 
-            // TODO: complete handle
+            if (empty($link)) {
+                $this->notFound();
+            }
+
+            header('Location: '.$link);
+
         }
 
     }
