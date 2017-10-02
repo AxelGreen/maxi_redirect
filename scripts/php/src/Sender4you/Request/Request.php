@@ -71,12 +71,15 @@
             $ip = $this->getIp();
             $this->request['ip'] = $ip;
             $location_data = $this->getLocationByIp($ip);
-            var_dump($location_data);
+            if ( !empty($location_data['country_code'])) {
+                $this->request['country'] = $location_data['country_code'];
+            }
+            if ( !empty($location_data['city'])) {
+                $this->request['city'] = $location_data['city'];
+            }
 
             $detector = new Mobile_Detect;
             $this->request['device'] = $this->getDeviceType($detector);
-
-            var_dump($this->request);
 
         }
 
