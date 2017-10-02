@@ -1,2 +1,5 @@
+# update geoIP db
+0 3 * * * /etc/sender4you/bash/geoip_db_update.sh >/dev/null 2>/var/log/sender4you/geoip.log
+
 # TODO: complete
 # empty new line required, don't delete it

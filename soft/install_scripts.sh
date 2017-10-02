@@ -8,3 +8,5 @@ mv ./scripts/php/* /etc/sender4you
 composer install --working-dir /etc/sender4you
 # copy bash scripts
 mv ./scripts/bash /etc/sender4you/
+# update geoip db
+/etc/sender4you/bash/geoip_db_update.sh
