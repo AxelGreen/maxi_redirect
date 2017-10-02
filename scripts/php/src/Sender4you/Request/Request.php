@@ -30,8 +30,6 @@
         public function __construct()
         {
 
-            echo '<pre>';
-
             $this->readInput();
             $this->validateInput();
             $this->requestDetails();

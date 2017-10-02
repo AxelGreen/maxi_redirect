@@ -8,15 +8,16 @@
 
     namespace Sender4you\Request;
 
-    use Common\Converter;
-
     class Open extends Request
     {
 
-        protected $input = array(
-            'task_id' => 0,
-            'email_id' => 0
-        );
+        private $image_file = '/var/www/includes/empty.gif';
+
+        protected $input
+            = array(
+                'task_id'  => 0,
+                'email_id' => 0
+            );
 
         protected $endpoint = 'open';
 
@@ -25,7 +26,25 @@
 
             parent::handle();
 
+            $this->genImage();
+            exit(0);
 
+        }
+
+        private function genImage()
+        {
+
+            // open file
+            $handle = fopen($this->image_file, 'r');
+            // read content
+            $contents = fread($handle, filesize($this->image_file));
+            // close file
+            fclose($handle);
+
+            // change response content type to gif
+            header('Content-Type: image/gif');
+            // print file content
+            echo($contents);
         }
 
     }
