@@ -4,6 +4,8 @@
     class Click extends Request
     {
 
+        protected $endpoint = 'open';
+
         public function handle()
         {
 

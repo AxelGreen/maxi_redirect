@@ -2,6 +2,7 @@
 
     namespace Common\Connection;
 
+    use Common\Converter;
     use Config\ConnectionConfig;
     use Exception;
 

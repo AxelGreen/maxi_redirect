@@ -8,6 +8,8 @@
 
     namespace Sender4you\Request;
 
+    use Common\Converter;
+
     class Open extends Request
     {
 
@@ -16,14 +18,14 @@
             'email_id' => 0
         );
 
+        protected $endpoint = 'open';
+
         public function handle()
         {
 
             parent::handle();
 
-            echo 'open';
 
-            // TODO: complete handle
         }
 
     }
