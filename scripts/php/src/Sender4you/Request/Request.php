@@ -39,6 +39,8 @@
 
         private function readInput()
         {
+            var_dump(1);
+
 
             // get subdomain - it contains input params
             $domain_parts = explode('.', $_SERVER['HTTP_HOST']);
