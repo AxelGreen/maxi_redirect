@@ -7,10 +7,6 @@ if [ $? -ne 0 ]; then
     apt-get install -y software-properties-common
 fi
 
-# postgresql
-add-apt-repository -y "deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main"
-wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
-
 # for php 7.0
 version=$(awk '{print $3}' /etc/*-release)
 if [ "${version}" == "8" ]; then
@@ -26,7 +22,6 @@ fi
 apt-get update
 apt-get install -y fail2ban htop
 apt install -y apache2
-apt-get install -y postgresql-9.6
 apt-get install -y --allow-unauthenticated php7.0 php7.0-opcache php7.0-mbstring php7.0-bcmath php7.0-zip php7.0-geoip php7.0-curl php7.0-json php7.0-pgsql php7.0-cli apache2-mod-php7.0
 
 # composer

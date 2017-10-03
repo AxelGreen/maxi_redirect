@@ -2,8 +2,6 @@
 
     namespace Sender4you\Request;
 
-    use Common\Converter;
-
     class Click extends Request
     {
 

@@ -12,11 +12,10 @@ fi
 
 # remove repositories
 add-apt-repository --remove -y ppa:ondrej/php
-add-apt-repository --remove -y precise-pgdg
 add-apt-repository --remove -y testing
 
 # purge soft
-patterns=("postgres" "php7" "fail2ban" "htop" "git" "apache2")
+patterns=("php7" "fail2ban" "htop" "git" "apache2")
 for pattern in ${patterns[@]}; do
     apt-get --purge remove -y $(dpkg -l | grep ${pattern} | awk -F ' ' '{print $2}')
 done

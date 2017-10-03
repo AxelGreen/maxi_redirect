@@ -107,6 +107,7 @@
         {
 
             // get from environment
+            /** @noinspection SpellCheckingInspection */
             $ip = getenv('HTTP_CLIENT_IP')
                 ? :
                 getenv('HTTP_X_FORWARDED_FOR')

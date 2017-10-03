@@ -3,16 +3,10 @@
     //use Sender4you\Configure\Postgres;
 
     use Sender4you\Configure\Apache;
-    use Sender4you\Configure\Postgres;
 
     require_once __DIR__.'/vendor/autoload.php';
 
     try {
-
-        // postgresql
-        $postgres = new Postgres();
-        // create table
-        $postgres->run();
 
         // apache
         $apache = new Apache();

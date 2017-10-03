@@ -7,15 +7,6 @@
     class ConnectionConfig extends Singleton
     {
 
-        public
-            $postgresql
-            = array(
-            'host'     => 'localhost',
-            'dbname'   => 'postgres',
-            'user'     => 'postgres',
-            'password' => ''
-        );
-
         public $sender4you_api
             = array(
                 'host'           => 'http://api.sender4you.com/',

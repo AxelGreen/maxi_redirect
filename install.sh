@@ -16,7 +16,6 @@ echo Soft installation
 
 echo Configuration
 # run all configuration change files
-./config/postgres.sh
 ./config/fail2ban.sh
 ./config/php.sh
 ./config/apache.sh

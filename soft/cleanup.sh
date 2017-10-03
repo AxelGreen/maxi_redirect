@@ -5,5 +5,3 @@ cp /root/maxi_redirect/install.log /var/log/sender4you/install.log
 rm -rf /root/maxi_redirect/
 rm -rf /root/install_run.sh
 rm -rf /root/install_run.log
-# purge git
-apt-get purge -y git
