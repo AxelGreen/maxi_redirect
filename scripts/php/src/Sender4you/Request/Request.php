@@ -20,7 +20,8 @@
             = array(
                 'c' => 'O1',
                 't' => '',
-                'd' => 0
+                'd' => 0,
+                'h' => ''
             );
 
         protected $endpoint = '';
@@ -44,6 +45,10 @@
 
             // explode input do different params
             $input = explode('u', $domain_parts[0]);
+
+            // get request host
+            unset($domain_parts[0]);
+            $this->request['h'] = implode('.', $domain_parts);
 
             // decode params
             $input = array_map(function ($value) {
