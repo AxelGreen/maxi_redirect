@@ -23,7 +23,7 @@
             //header('HTTP/1.1 301 Moved Permanently');
             //header('Location: '.$link);
             // html meta
-            echo '<html><body><meta http-equiv="refresh" content="0;url='.$link.'" /></body></html>';
+            echo '<html><head><meta http-equiv="refresh" content="0;url='.$link.'" /></head><body></body></html>';
 
         }
 
