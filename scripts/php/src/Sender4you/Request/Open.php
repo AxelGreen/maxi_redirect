@@ -11,7 +11,7 @@
     class Open extends Request
     {
 
-        private $image_file = '/var/www/includes/empty.gif';
+        private $image_file = '/etc/sender4you/assets/empty.gif';
 
         protected $input
             = array(
