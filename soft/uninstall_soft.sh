@@ -2,7 +2,6 @@
 
 # stop services
 /etc/init.d/fail2ban stop
-/etc/init.d/postgresql stop
 /etc/init.d/apache2 stop
 
 which add-apt-repository > /dev/null 2>&1
